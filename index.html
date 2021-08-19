@@ -9,12 +9,95 @@
   <!-- Font-awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Style -->
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:wght@100;200;300;400;600&family=Lexend+Deca:wght@100;200;300;400;600&family=Livvic:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/swiper.css">
+
+   <!-- Style -->
+   <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
   
+  <!-- Navigation -->
+  <nav class="nav cb-flex cb-align-items-center">
+    <div class="nav-logo">
+      <a href="#" class="nav-brand">Blogger</a>
+    </div>
+    <div class="nav-icons">
+      <div class="bars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="other-bar"></div>
+      </div>
+    </div>
+    <div class="nav-content cb-flex cb-align-items-center">
+      <ul class="nav-items cb-flex">
+        <li class="nav-link">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">Category</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">Archive</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">Pages</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+      <div class="nav-social cb-flex">
+        <a href="http://facebook.com" ><i class="fab fa-facebook-f"></i></a>
+        <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="http://youtube.com"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main site section -->
+  <main>
+    <section class="site-title">
+      <div class="swiper-container hero">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide cb-flex cb-flex-column">
+            <h3>Tours & Travels</h3>
+            <h1>Amazing place on earth</h1>
+            <div class="btn">
+              <span>Explore</span>
+            </div>
+          </div>
+          <div class="swiper-slide cb-flex cb-flex-column">
+            <h3>Experience & Knowledge</h3>
+            <h1>Endless inspiration</h1>
+            <div class="btn">
+              <span>Explore</span>
+            </div>
+          </div>
+          <div class="swiper-slide cb-flex cb-flex-column">
+            <h3>Works & Actions</h3>
+            <h1>Enthusiasm all the time</h1>
+            <div class="btn">
+              <span>Explore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script src="./js/index.js"></script>
 </body>
 </html>
