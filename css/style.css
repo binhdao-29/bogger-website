@@ -22,6 +22,7 @@
 
   /* gradient color */
   --gcl-sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  --gcl-btn: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
 
   /* font size */
   --fs-h1: 3rem;
@@ -57,14 +58,24 @@ h1,
 h2,
 h3 {
   line-height: 1;
+  letter-spacing: 0.1rem;
   margin: 0;
 }
 
-h1 { font-size: var(--fs-h1); }
+h1 {
+  font-size: var(--fs-h1);
+  font-family: var(--ff-lex);
+}
 
-h2 { font-size: var(--fs-h2); }
+h2 {
+  font-size: var(--fs-h2);
+  font-family: var(--ff-lex);
+}
 
-h3 { font-size: var(--fs-h3); }
+h3 {
+  font-size: var(--fs-h3);
+  font-family: var(--ff-abel);
+}
 
 .cb-flex {
   display: flex;
@@ -84,7 +95,74 @@ h3 { font-size: var(--fs-h3); }
 
 /* Button */
 
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: 1rem 3rem;
+  background: var(--gcl-btn);
+  border: none;
+  color: var(--cl-primary);
+  font-size: 18px;
+  font-family: var(--ff-liv);
+  cursor: pointer;
 
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: transparent;
+}
+
+.btn::before, .btn::after{
+  content:"";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: var(--cl-primary);  
+  transition-delay: 0.2s;
+}
+
+.btn span::before, .btn span::after{
+  content:"";
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: var(--cl-primary);  
+
+  transition-delay: 0s;
+}
+
+.btn:hover::before, .btn:hover::after{
+  width: 100%;
+}
+.btn:hover span::before, .btn:hover span::after{
+  height: 100%;
+}
+
+.btn::before{
+  right: 0;
+  top: 0;
+}
+.btn::after{
+  left: 0;
+  bottom: 0;
+}
+.btn span::before{
+  left: 0;
+  top: 0;
+}
+.btn span::after{
+  right: 0;
+  bottom: 0;
+}
+.btn:hover::before, .btn:hover::after{
+  transition-delay: 0s;
+}
+.btn:hover span::before, .btn:hover span::after{
+  transition-delay: 0.2s;
+}
 
 /* ----------------Navigation----------------- */
 
@@ -316,4 +394,51 @@ h3 { font-size: var(--fs-h3); }
     opacity: 1;
   }
 
+}
+
+/*----------------------------Main-------------------------*/
+
+/* Hero Section */
+.hero {
+  color: var(--cl-primary);
+}
+
+.hero .swiper-slide {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .bg-1 {
+  background-image: url('../assets/Background-image.png');
+}
+
+.hero .bg-2 {
+  background-image: url('../assets/Background-image-4.png');
+}
+
+.hero .bg-3 {
+  background-image: url('../assets/Background-image-5.jpg');
+}
+
+.hero .swiper-slide .slide-content {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(90px);
+  transition: transform 1s ease;
+}
+
+.hero .swiper-slide.swiper-slide-active .slide-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.hero .swiper-slide .title {
+  margin-top: 0.5rem;
+}
+
+.hero .swiper-slide .btn {
+  margin-top: 1.8rem;
 }

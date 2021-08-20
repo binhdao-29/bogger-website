@@ -7,4 +7,14 @@ navIcon.addEventListener('click', () => {
 
 
 // ----------Swiper-------------
-const swiper = new Swiper(".hero", {});
+const swiper = new Swiper(".hero", {
+  effect: "fade",
+  grabCursor: "true",
+  fadeEffect: {
+    crossFade: true
+  },
+  speed: 1000,
+  autoplay: {
+    delay: 2500
+  },
+});
