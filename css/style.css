@@ -44,6 +44,11 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 a {
   text-decoration: none;
   color: var(--cl-gray);
@@ -399,13 +404,17 @@ h3 {
 /*----------------------------Main-------------------------*/
 
 /* Hero Section */
+.site-title {
+  padding-top: 0;
+}
+
 .hero {
   color: var(--cl-primary);
 }
 
 .hero .swiper-slide {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 3rem);
   background-size: cover;
   background-position: center;
 }
@@ -441,4 +450,142 @@ h3 {
 
 .hero .swiper-slide .btn {
   margin-top: 1.8rem;
+}
+
+/* Blog Carousel */
+
+.blog {
+  height: 100vh;
+  background-image: url('../assets/background-blog.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 65%;
+}
+
+.blog .blog-carousel {
+  padding: 0 2.5rem;
+}
+
+.blog .blog-carousel .blog-content {
+  text-align: center;
+  width: 80%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2),
+              0 10px 15px rgba(0, 0, 0, 0.1),
+              0 15px 20px rgba(0, 0, 0, 0.05);
+}
+
+.blog .blog-carousel .blog-title {
+  color: var(--cl-dark);
+  padding: 2rem;
+}
+
+.blog .blog-carousel .blog-title .btn {
+  color: var(--cl-dark);
+  padding: 0.7rem 3rem;
+  margin: 1.5rem 0;
+}
+
+.blog .blog-carousel .blog-title .btn::before,
+.blog .blog-carousel .blog-title .btn::after {
+  background: var(--gcl-btn);
+}
+
+.blog .blog-carousel .blog-title .btn span::before, 
+.blog .blog-carousel .blog-title .btn span::after {
+  background: var(--gcl-btn);
+}
+
+.blog-carousel .blog-title span {
+  display: block;
+  font-family: var(--ff-liv);
+  font-weight: 300;
+}
+
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background: var(--cl-primary);
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0 6px 6px rgba(0, 0, 0, 0.23);
+
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.2);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+              0 10px 10px rgba(0,0,0,0.22);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem;
+  color: var(--cl-dark);
+}
+
+/* Card Image */
+.blog-content .card {
+  position: relative;
+  background: var(--cl-secondary)
+}
+
+.blog-content .card::before,
+.blog-content .card::after {
+  content: '';
+  position: absolute;
+  inset: 1.25rem;
+  opacity: 1;
+  
+  transition: transform 0.25s ease-out;
+}
+
+.blog-content .card::before {
+  border-top: 1px solid var(--cl-primary);
+  border-bottom: 1px solid var(--cl-primary);
+  transform: scale(0, 1);
+}
+
+.blog-content .card::after {
+  border-right: 1px solid var(--cl-primary);
+  border-left: 1px solid var(--cl-primary);
+  transform: scale(1, 0);
+}
+
+.blog-content .card:hover::before {
+  transform: scale(1.05, 1);
+}
+.blog-content .card:hover::after {
+  transform: scale(1, 1.05);
+}
+
+.blog-content .card .card-img {
+  max-width: 100%;
+  display: block;
+
+  transition: opacity 0.25s ease-out;
+}
+
+.blog-content .card:hover .card-img {
+  opacity: 0.4;
+}
+
+.blog-content .card .card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--cl-primary);
+  font-family: var(--ff-liv);
+  font-size: 2rem;
+  opacity: 0;
+
+  transition: opacity 0.25s ease-out;
+}
+
+.card:hover .card-text {
+  opacity: 1;
 }
