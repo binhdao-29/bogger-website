@@ -20,6 +20,12 @@
   --cl-dark: #0f0f0f;
   --cl-midnight: #104f55;
 
+  /* social icon color */
+  --cl-fb: #4267b2;
+  --cl-ig:  #c13584;
+  --cl-tt: #1da1f2;
+  --cl-yt: #dd5044;
+
   /* gradient color */
   --gcl-sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   --gcl-btn: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
@@ -170,6 +176,8 @@ h3 {
 .btn:hover span::before, .btn:hover span::after{
   transition-delay: 0.2s;
 }
+
+/* ============================HEADER============================ */
 
 /* ----------------Navigation----------------- */
 
@@ -403,7 +411,7 @@ h3 {
 
 }
 
-/*----------------------------MAIN-------------------------*/
+/*============================MAIN============================*/
 
 /* ------------------------Hero Section--------------------- */
 .site-title {
@@ -529,7 +537,7 @@ h3 {
   color: var(--cl-dark);
 }
 
-/*--------------------------Card Image----------------------------------- */
+/* Card Image */
 .blog-content .card {
   position: relative;
   background: var(--cl-secondary)
@@ -686,7 +694,7 @@ h3 {
   font-size: 1rem;
 }
 
-/* -----------------Blog Pagination------------------ */
+/* Blog Pagination */
 .pagination {
   margin-top: 2rem;
 }
@@ -736,6 +744,8 @@ h3 {
 }
 
 /* -----------------------Sidebar-------------------- */
+
+/* Category */
 .sidebar {
   padding-left: 2rem;
 }
@@ -762,7 +772,7 @@ h3 {
   justify-content: space-between;
 }
 
-/* -----------------Popular Post----------------------- */
+/* Popular Post */
 .sidebar .posts,
 .sidebar .newsletter,
 .sidebar .popular-tags {
@@ -793,7 +803,7 @@ h3 {
   font-size: 1rem;
 }
 
-/* ---------------------Newsletter------------------------- */
+/* Newsletter */
 .sidebar .newsletter .form-contact {
   padding-left: 2.5rem;
 }
@@ -807,7 +817,7 @@ h3 {
   margin-bottom: 1rem;
 }
 
-/* ---------------------Popular Tags------------------------- */
+/* Popular Tags */
 .sidebar .popular-tags .tag {
   display: inline-block;
   background: var(--gcl-sky);
@@ -815,4 +825,187 @@ h3 {
   padding: 0.4rem 1rem;
   margin: 0.5rem 0.3rem;
   border-radius: 3rem;
+}
+
+/* ============================FOOTER============================ */
+
+.footer {
+  position: relative;
+  height: 100%;
+  background: var(--cl-dark);
+  font-family: var(--ff-lex);
+  color: var(--cl-primary);
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  padding: 5rem 4.5rem;
+}
+
+.footer .container .title {
+  color: var(--cl-primary);
+  font-size: 1.5rem;
+  font-family: var(--ff-lex);
+  margin-bottom: 2rem;
+}
+
+/* About us */
+.footer .container .about-us {
+  padding-right: 1rem;
+}
+
+.footer .container .text {
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.footer .container .about-us .social-list a {
+  display: inline-block;
+}
+
+.footer .container .about-us .social-list a i {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: var(--cl-primary);
+  color: var(--cl-dark);
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 0.8rem;
+  line-height: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .container .about-us .social-list a:hover i {
+  color: var(--cl-primary);
+}
+
+.footer .container .about-us .social-list a .fa-facebook-f {
+  color: var(--cl-fb);
+}
+
+.footer .container .about-us .social-list a .fa-instagram {
+  color: var(--cl-ig);
+}
+
+.footer .container .about-us .social-list a .fa-twitter {
+  color: var(--cl-tt);
+}
+
+.footer .container .about-us .social-list a .fa-youtube {
+  color: var(--cl-yt);
+}
+
+.footer .container .about-us .social-list a:hover .fa-facebook-f {
+  background: var(--cl-fb);
+}
+
+.footer .container .about-us .social-list a:hover .fa-instagram {
+  background: var(--cl-ig);
+}
+
+.footer .container .about-us .social-list a:hover .fa-twitter {
+  background: var(--cl-tt);
+}
+
+.footer .container .about-us .social-list a:hover .fa-youtube {
+  background: var(--cl-yt);
+}
+
+/* Newsletter */
+
+.footer .container .newsletter {
+  padding: 0 1rem;
+}
+
+.footer .container .newsletter .newsletter-container .newsletter-wrapper {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.footer .container .newsletter .newsletter-container .newsletter-wrapper .image {
+  width: 100%;
+  height: auto;
+}
+
+.footer .container .newsletter .newsletter-container .newsletter-wrapper .content {
+  margin-left: 1rem;
+}
+
+.footer .newsletter-wrapper .content .date {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #A7CBFC;
+}
+
+/* Quick link */
+/* Other link */
+.footer .container .quick-link,
+.footer .container .other-link {
+  padding: 0 1rem;
+}
+
+.footer .container .quick-link ul li,
+.footer .container .other-link ul li {
+  margin-bottom: 1rem;
+}
+
+.footer .container .quick-link ul li a,
+.footer .container .other-link ul li a {
+  color: var(--cl-primary);
+  text-transform: capitalize;
+  line-height: 1.4;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.footer .copyright {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.footer .copyright p {
+  opacity: 0.8;
+}
+
+.footer .copyright p a {
+  color: var(--cl-primary);
+}
+
+.footer .copyright p a:hover {
+  text-decoration: underline;
+}
+
+/* Move Up Button */
+.footer .move-up {
+  position: absolute;
+  bottom: 25%;
+  right: 5%;
+}
+
+.footer .move-up a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: var(--cl-primary);
+  border-radius: 50%;
+  border: 1px solid var(--cl-primary);
+  text-align: center;
+  line-height: 40px;
+  opacity: 0.4;
+  transition: all 0.4s ease-in-out;
+}
+
+.footer .move-up a:hover {
+  background: var(--cl-primary);
+  color: var(--cl-dark);
+  transform: scale(1.2);
+  opacity: 1;
 }
