@@ -129,3 +129,7 @@ const createPagination = (totalPages, page) => {
 }
 
 paginationEl.innerHTML = createPagination(totalPages, page);
+
+// AOS js
+
+AOS.init();
