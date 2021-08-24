@@ -37,6 +37,11 @@ const swiperBlog = new Swiper(".blog-carousel", {
   },
   breakpoints: {
     // when window width is >= 768
+    576: {
+      slidesPerView: 1.5,
+      spaceBetween: 10
+    },
+    // when window width is >= 768
     768: {
       slidesPerView: 2,
       spaceBetween: 10

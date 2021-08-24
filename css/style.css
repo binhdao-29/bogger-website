@@ -37,7 +37,7 @@
   --fs-body: 1rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3rem;
@@ -50,7 +50,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   section {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -367,8 +367,8 @@ h3 {
   }
 }
 
-/* Viewport less than or equal to 800px */
-@media screen and (max-width: 800px) {
+/* Viewport less than or equal to 992px */
+@media screen and (max-width: 992px) {
   .nav,
   .nav-items {
     flex-direction: column;
@@ -604,8 +604,22 @@ h3 {
 /*-------------------------------Post------------------------ */
 .site-content {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 100%;  
   margin: 0 5rem;
+}
+
+.site-content .site-container {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 992px) {
+  .site-content {
+    grid-template-columns: 70% 30%;
+  }
+
+  .site-content .site-container {
+    margin-bottom: 0;
+  }
 }
 
 .site-content .site-container .posts {
@@ -624,14 +638,22 @@ h3 {
 }
 
 .site-content .posts .post-content .post-info {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 50%;
+  width: 65%;
   transform: translate(-50%, 0);
   text-align: center;
   background: var(--gcl-sky);
   padding: 1rem;
   border-radius: 3rem;
+}
+
+@media screen and (min-width: 576px) {
+  .site-content .posts .post-content .post-info {
+    display: block;
+  }
 }
 
 .posts .post-content .post-img {
@@ -697,6 +719,14 @@ h3 {
 /* Blog Pagination */
 .pagination {
   margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .pagination {
+    display: block;
+  }
 }
 
 .pagination ul li{
@@ -747,7 +777,13 @@ h3 {
 
 /* Category */
 .sidebar {
-  padding-left: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar {
+    padding-left: 2rem;
+  }
 }
 
 .sidebar .title {
@@ -770,6 +806,13 @@ h3 {
   margin: 0.8rem 0;
   border-radius: 3rem;
   justify-content: space-between;
+  max-width: 70%;
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar .category .category-list .list-item {
+    max-width: 100%;
+  }
 }
 
 /* Popular Post */
@@ -783,8 +826,10 @@ h3 {
   margin-top: 8rem;
 }
 
-.sidebar .popular-post .posts {
-  padding-left: 2.5rem;
+@media screen and (min-width: 992px) {
+  .sidebar .popular-post .posts {
+    padding-left: 2.5rem;
+  }
 }
 
 .sidebar .popular-post .posts .post-info {
@@ -806,6 +851,13 @@ h3 {
 /* Newsletter */
 .sidebar .newsletter .form-contact {
   padding-left: 2.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .sidebar .newsletter .form-contact {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .sidebar .newsletter .form-contact .input {
@@ -838,15 +890,29 @@ h3 {
 }
 
 .footer .container {
-  display: grid;
-  grid-template-columns: 2fr 2fr 1fr 1fr;
-  padding: 5rem 4.5rem;
+  display: block;
+  padding: 4.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+  }
 }
 
 .footer .container .title {
   color: var(--cl-primary);
   font-size: 1.5rem;
   font-family: var(--ff-lex);
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -922,19 +988,25 @@ h3 {
 }
 
 .footer .container .newsletter .newsletter-container .newsletter-wrapper {
-  display: grid;
-  grid-template-columns: 40% 60%;
+  display: block;
   width: 100%;
   margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container .newsletter .newsletter-container .newsletter-wrapper {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .footer .container .newsletter .newsletter-container .newsletter-wrapper .content {
+    margin-left: 1rem;
+  }
 }
 
 .footer .container .newsletter .newsletter-container .newsletter-wrapper .image {
   width: 100%;
   height: auto;
-}
-
-.footer .container .newsletter .newsletter-container .newsletter-wrapper .content {
-  margin-left: 1rem;
 }
 
 .footer .newsletter-wrapper .content .date {
